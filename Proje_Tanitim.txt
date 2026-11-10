@@ -1,0 +1,18 @@
+Proje: Taskflow - Görev Yönetim Sistemi API
+Geliştiren: Eren
+
+1. Projenin Amacı
+Bu projeyi bootcamp backend eğitimimiz kapsamında Node.js ve Express.js kullanarak bir REST API (sunucu) ayağa kaldırmak için hazırladım. Projede verileri tutmak için kod içinde geçici bir liste (array) kullandım ve sunucuya gelen istekleri bu liste üzerinden yönettim.
+
+2. Nasıl Çalışıyor? (Senaryo)
+Projeyi basit bir görev takip (to-do) sistemi gibi kurguladım. Postman üzerinden sisteme yeni görevler (başlık, açıklama, öncelik durumu vb.) gönderiyorum. Sistem bu görevleri alıp listeye ekliyor. Daha sonra yine Postman üzerinden bu görevleri listeleyebiliyor, ID numarasına göre bulup içindeki bilgileri güncelleyebiliyor veya silebiliyorum.
+
+3. Projeye Eklediğim Özellikler
+
+Temel İşlemler (CRUD): Görev ekleme, okuma, tekil detay getirme, güncelleme ve silme (POST, GET, PUT, DELETE) fonksiyonlarını yazdım.
+
+Arama ve Filtreleme: Görevleri listelerken (GET isteğinde), URL üzerinden gönderilen kelimeye göre arama yapan ve görev durumuna göre filtreleyen kodları ekledim.
+
+Sayfalama (Pagination): Görevleri listelerken sadece belirli sayıda görevin gelmesi için sayfa numarası ve limit mantığını kurdum.
+
+Logger (Kayıt): Sunucuya gelen her isteğin HTTP metodunu, adresini (URL) ve o anki saat bilgisini terminale yazdıran bir middleware (ara katman) fonksiyonu kullandım.
